@@ -15,3 +15,26 @@
 
     # Введите номер месяца: 15
     # Такого месяца нет!
+
+import datetime
+number = input("Введите номер месяца: ")
+month = int(number)
+if int(number) < 1 or int(number) > 12:print("Такого месяца нет!")
+else:
+    datetime_object = datetime.datetime.strptime (number, "%m")
+    month_name = datetime_object.strftime("%B")
+    print("Название месяца: ",month_name)
+days={1:31,
+2:28,
+3:31,
+4:30,
+5:31,
+6:30,
+7:31,
+8:31,
+9:30,
+10:31,
+11:30,
+12:31}
+if month in days:
+    print('Дней', days[month])
