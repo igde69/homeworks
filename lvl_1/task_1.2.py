@@ -6,18 +6,7 @@
 # Выведите общее время звучания трех случайных песен в формате
 # Три песни звучат ХХХ минут
 
-my_favorite_songs = [
-    ['Waste a Moment', 3.03],
-    ['New Salvation', 4.02],
-    ['Staying\' Alive', 3.40],
-    ['Out of Touch', 3.03],
-    ['A Sorta Fairytale', 5.28],
-    ['Easy', 4.15],
-    ['Beautiful Day', 4.04],
-    ['Nowhere to Run', 2.58],
-    ['In This World', 4.02],
-]
-#         ***
+#                ***
 import random
 my_favorite_songs = [
     ['Waste a Moment', 3.03],
@@ -42,12 +31,16 @@ my_favorite_songs = [
 #type(songs)
 
 songs =(random.sample (my_favorite_songs, 3))
-print(songs)
+#print(songs)
 time = 0
 for song in songs:
        time += song[1]
-print("Три песни списка звучат: {:.0f}".format(time), 'минут')        
+# adds the right side operand’s value to the left side operand
+# and assigns the result to the left operand       
+print("Три песни списка звучат: {:.0f}".format(time), 'минут')
+# форматирование time (Format float with no decimal places)        
 
+#                ***
 
 # Пункт B. 
 # Есть словарь песен 
@@ -65,26 +58,68 @@ my_favorite_songs_dict = {
     'Nowhere to Run': 2.58,
     'In This World': 4.02,
 }
-#          ***
 import random
 keys = random.sample(list(my_favorite_songs_dict.keys()), 3)
 #"DeprecationWarning: Sampling from a set deprecated since Python 3.9
 #and will be removed in a subsequent version" occurs when using 
 #the random.sample() function with a set as an argument in Python 3.9 or later versions
-#To fix this warning convert the set to a list. 
-print(keys)
+# программ дальше не работает - to fix this warning convert the set to a list. 
+#print(keys)
 time = 0
 for key in keys:
     time += my_favorite_songs_dict[key]
 print("Три песни словаря звучат: {:.0f}".format(time), 'минут')
 
+#                ***
 
 # Дополнительно для пунктов A и B
 # Пункт C.
 # Сгенерируйте случайные песни с помощью модуля random
 # import random
 
+#                ***
+
+import random
+my_favorite_songs = [
+    ['Waste a Moment', 3.03],
+    ['New Salvation', 4.02],
+    ['Staying\' Alive', 3.40],
+    ['Out of Touch', 3.03],
+    ['A Sorta Fairytale', 5.28],
+    ['Easy', 4.15],
+    ['Beautiful Day', 4.04],
+    ['Nowhere to Run', 2.58],
+    ['In This World', 4.02],
+]
+
+songs = random.randint(0, len(my_favorite_songs) - 1)
+# random.randint = возвращает псевдослучайное целое число
+# в заданном диапазоне (0, len(my_favorite_songs) - 1)
+# print(len(my_favorite_songs))
+song_name = my_favorite_songs[songs]
+print("Случайная песня из списка :",song_name)
+
+#                ***
+
+import random
+my_favorite_songs_dict = {
+    'Waste a Moment': 3.03,
+    'New Salvation': 4.02,
+    'Staying\' Alive': 3.40,
+    'Out of Touch': 3.03,
+    'A Sorta Fairytale': 5.28,
+    'Easy': 4.15,
+    'Beautiful Day': 4.04,
+    'Nowhere to Run': 2.58,
+    'In This World': 4.02,
+}
+
+song = random.choice(list(my_favorite_songs_dict.keys()))
+print("Случайная песня из словаря :",song)
+
+
+
 # Дополнительно 
 # Пункт D.
 # Переведите минуты и секунды в формат времени. Используйте модуль datetime 
-
+#                ***
