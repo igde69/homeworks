@@ -123,3 +123,36 @@ print("Случайная песня из словаря :",song)
 # Пункт D.
 # Переведите минуты и секунды в формат времени. Используйте модуль datetime 
 #                ***
+
+import random
+import datetime
+my_favorite_songs = [
+    ['Waste a Moment', 3.03],
+    ['New Salvation', 4.02],
+    ['Staying\' Alive', 3.40],
+    ['Out of Touch', 3.03],
+    ['A Sorta Fairytale', 5.28],
+    ['Easy', 4.15],
+    ['Beautiful Day', 4.04],
+    ['Nowhere to Run', 2.58],
+    ['In This World', 4.02],
+]
+songs =(random.sample (my_favorite_songs, 3))
+#print(songs)
+time = 0
+for song in songs:
+       time += song[1]
+# получили время трех случайных песен
+x = time
+tseconds = int(x*60)
+# перевели его в секунды
+time_delta = datetime.timedelta(seconds = tseconds)
+# создание объекта 
+start = datetime.datetime(1900,1,1)
+# начальное время (обязательно?)
+result = start + time_delta
+# суммируем с исследуемым интервалом
+time_str = result.strftime('%H:%M:%S')
+# форматирование 
+print('Время звучания:', str(time_str)[3:]) 
+# вывод без часов
