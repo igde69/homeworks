@@ -97,7 +97,7 @@ songs = random.randint(0, len(my_favorite_songs) - 1)
 # в заданном диапазоне (0, len(my_favorite_songs) - 1)
 # print(len(my_favorite_songs))
 song_name = my_favorite_songs[songs]
-print("Случайная песня из списка :",song_name)
+print("Случайная песня из списка :",song_name [0])
 
 #                ***
 
