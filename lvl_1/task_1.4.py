@@ -45,4 +45,4 @@ for goods,codes in titles.items():
         price = titles['price']
         # Общая
         total_price += quantity * price
-        print(goods, quantity, ' шт.', ' стоимость', total_price, 'рублей.')
+        print(goods, quantity,' шт.', 'стоимость', price, 'общая стоимость', total_price, 'рублей.')
