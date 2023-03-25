@@ -18,12 +18,23 @@ def maximum(arr):
     pass
 # заглушка = отсутствие действия 
 
+                ###
+
 integer_list = [12, 56, 87, 17, 35, 68, 73]
 max_value = sorted(integer_list, reverse=True)[0]
-#sorted_list = sorted(integer_list, reverse=True)
-#print(sorted_list) 
+sorted_list = sorted(integer_list, reverse=True)
+print(sorted_list) 
 print('max =', max_value)
 
 min_value = sorted(integer_list)
 min_value = min_value[0]
 print('min =',min_value)
+
+                ###
+
+
+#integer_list = [4,6,2,1,9,63,-134,566]
+#mx = max(integer_list)
+#mn = min(integer_list)
+#print('Наибольшее:', mx)
+#print('Наименьшее:', mn)
