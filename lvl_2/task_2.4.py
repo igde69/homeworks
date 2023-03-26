@@ -7,12 +7,12 @@
 # foo("") -> ""
 # foo("Oh, no!!!") -> "Oh, no"
 
-def remove_exclamation_marks(s):
-    return s.replace("!","")
+#def remove_exclamation_marks(s):
+#    return s.replace("!","")
 #s = '"Hi! Hello!"'
 #s = '""'
-s = '"Oh, no!!!"'
-print(remove_exclamation_marks(s))
+#s = '"Oh, no!!!"'
+#print(remove_exclamation_marks(s))
 
                 ###
 
@@ -22,16 +22,15 @@ print(remove_exclamation_marks(s))
 # remove("Hi!!!") == "Hi!!"
 # remove("!Hi") == "!Hi"
 
-def remove_last_em(s):
-    if s.endswith('!'):
-     return s[:-1]
-    else:
-       return s
-s = "!Hi"
-print(remove_last_em(s))
+#def remove_last_em(s):
+#    if s.endswith('!'):
+#     return s[:-1]
+#    else:
+#       return s
+#s = '"!Hi"'
+#print(remove_last_em(s))
 
-# !Hi
-# "" ???
+# "!Hi"
 
             ###
 
@@ -55,12 +54,13 @@ def remove_word_with_one_em(s):
     for word in words:
         if word.count('!') !=1:
             result.append(word)
-    return ' '.join(result)        
+    return ''.join(result)        
 s = "Hi! !Hi! Hi!"
 print(remove_word_with_one_em(s))
 
+
 # !Hi!
-# ???
+
 
 
 
