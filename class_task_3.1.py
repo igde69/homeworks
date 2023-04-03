@@ -32,8 +32,23 @@ class Matrix:
         self.columns = columns
         self.matrix = [[8 for j in range(columns)] for i in range(lines)]
     
-    #def get_cell(self, line, column):
-        #return self.matrix[line][column]
+    
 m = Matrix(12, 12)
+pprint(m.matrix)
+print('Количество строк:',m.lines, 'Количество столбцов:', m.columns)
+                ###
+from pprint import pprint
+class Matrix:
+    def __init__(self, lines, columns):
+        self.lines = lines
+        self.columns = columns
+        self.matrix = [[1 for j in range(columns)] for i in range(lines)]
+        
+    def set_cell(self, line, column,value):
+        self.matrix[line][column] = value
+
+m = Matrix(8, 8)
+m.set_cell(4, 4, 8)
+
 pprint(m.matrix)
 print('Количество строк:',m.lines, 'Количество столбцов:', m.columns)
