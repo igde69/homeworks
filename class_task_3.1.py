@@ -3,7 +3,7 @@
 # Требования к классу:
 #   - каждая колонка является числом от 1 до n (n любое число, которые вы поставите!)
 #   - в каждой ячейке содержится либо число, либо None
-#   - доступы следующие методы матрицы:
+#   - доступны следующие методы матрицы:
 #       * принимать новые значения, 
 #       * заменять существующие значения, 
 #       * выводить число строк и колонок.
@@ -25,3 +25,15 @@
 #   - отображать в таблице/матрице название колонки не обязательно!
 #   - проявите фантазию :)
 
+from pprint import pprint
+class Matrix:
+    def __init__(self, lines, columns):
+        self.lines = lines
+        self.columns = columns
+        self.matrix = [[8 for j in range(columns)] for i in range(lines)]
+    
+    def get_cell(self, line, column):
+        return self.matrix[line][column]
+m = Matrix(12, 12)
+pprint(m.matrix)
+print('Количество строк:',m.lines, 'Количество столбцов:', m.columns)
